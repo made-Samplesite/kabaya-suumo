@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/* ライフデザイン・カバヤ様 SUUMO フリーページ（PC用）
+   SUUMO 本体のデザインと混ざらないよう、すべて #includeContent の内側だけに効かせる */
+
+#includeContent .kby {
+  width: 100%;
+  margin: 0 auto;
+  color: #2b2b2b;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+}
+#includeContent .kby * { box-sizing: border-box; }
+#includeContent .kby img { display: block; max-width: 100%; height: auto; }
+#includeContent p { margin: 0; padding: 0; text-align: inherit; font-size: inherit; line-height: inherit; background: none; border: 0; }
+#includeContent li, #includeContent dl, #includeContent dt, #includeContent dd { margin: 0; padding: 0; background: none; border: 0; }
+#includeContent .kby ul { margin: 0; padding: 0; list-style: none; }
+#includeContent .kby a { text-decoration: none !important; -webkit-transition: opacity .3s; transition: opacity .3s; }
+#includeContent .kby a:hover { opacity: .85; }
+#includeContent .font02 { font-family: "Zen Kaku Gothic New", "游ゴシック体", YuGothic, sans-serif; font-weight: 700; }
+/* SUUMO の本文エリアは幅950px。背景の帯は950pxいっぱい、中身はアキュラホーム様と同じ800／700／620pxに収める */
+#includeContent .scInr { max-width: 800px; width: 100%; margin: 0 auto; }
+#includeContent .scInr02 { max-width: 700px; width: 100%; margin: 0 auto; }
+#includeContent .scInr03 { max-width: 620px; width: 100%; margin: 0 auto; }
+
+/* メインビジュアル */
+#includeContent .kby-mv { position: relative; height: 620px; overflow: hidden; background: #3a2e24; }
+#includeContent .kby-mv__img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+#includeContent .kby-mv:after { content: ""; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: linear-gradient(90deg, rgba(30, 24, 18, .78) 0%, rgba(30, 24, 18, .45) 55%, rgba(30, 24, 18, 0) 100%); }
+#includeContent .kby-mv__copy { position: absolute; left: 75px; top: 150px; z-index: 1; color: #fff; }
+#includeContent .kby-mv__label { display: inline-block; padding: 4px 14px; border: 1px solid #fff; color: #fff; font-size: 15px; letter-spacing: .12em; }
+#includeContent .kby-mv__title { margin: 22px 0 0; color: #fff; font-size: 48px; line-height: 1.45; letter-spacing: .04em; }
+#includeContent .kby-mv__lead { margin-top: 24px; color: #fff; font-size: 18px; line-height: 1.8; }
+
+/* 予約ボタン */
+#includeContent .kby-cta { padding: 40px 0 44px; background: #f6f1ea; text-align: center; }
+#includeContent .kby-cta__btn {
+  display: inline-block;
+  min-width: 560px;
+  padding: 16px 40px 18px;
+  border-radius: 999px;
+  background: #d8602a;
+  color: #fff !important;
+  font-family: "Zen Kaku Gothic New", "游ゴシック体", YuGothic, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center !important;
+  box-shadow: 0 4px 0 #a9461b;
+  -webkit-animation: kbyPulse 2s ease-out infinite;
+  animation: kbyPulse 2s ease-out infinite;
+}
+#includeContent .kby-cta__small { display: block; width: 100%; text-align: center !important; margin-bottom: 2px; color: #fff; font-size: 14px; font-weight: 500; }
+#includeContent .kby-cta__note { margin-top: 14px; font-size: 13px; color: #6b5a4a; }
+@-webkit-keyframes kbyPulse { 0%, 70%, 100% { -webkit-transform: scale(1); } 80% { -webkit-transform: scale(1.04); } 90% { -webkit-transform: scale(.99); } }
+@keyframes kbyPulse { 0%, 70%, 100% { transform: scale(1); } 80% { transform: scale(1.04); } 90% { transform: scale(.99); } }
+
+/* セクション共通 */
+#includeContent .kby-sec { padding: 80px 0; }
+#includeContent .kby-sec--white { background: #fff; }
+#includeContent .kby-sec--wood { background: #f6f1ea; }
+#includeContent .kby-sec--gray { background: #efeeeb; }
+#includeContent .kby-en { color: #b07a4a; font-size: 14px; letter-spacing: .24em; text-align: center; }
+#includeContent .kby-h { margin: 8px 0 40px; color: #2b2b2b; font-size: 32px; line-height: 1.5; text-align: center; }
+#includeContent .kby-text { font-size: 16px; line-height: 1.9; }
+#includeContent .kby-text--center { margin-top: 28px; text-align: center; font-size: 14px; color: #5a5a5a; }
+#includeContent #kby-sec01 .kby-text { text-align: center; }
+
+/* 構造Lab.とは */
+#includeContent .kby-about { display: flex; justify-content: space-between; margin-top: 36px !important; }
+#includeContent .kby-about__item { width: 252px; }
+#includeContent .kby-about__item img { width: 252px; height: 168px; object-fit: cover; border-radius: 6px; }
+#includeContent .kby-about__name { margin-top: 12px; font-size: 18px; text-align: center; }
+#includeContent .kby-about__text { margin-top: 4px; font-size: 13px; line-height: 1.7; color: #5a5a5a; text-align: center; }
+
+/* 3つのポイント */
+#includeContent .kby-point { display: flex; align-items: center; justify-content: space-between; margin-top: 40px; }
+#includeContent .kby-point--rev { flex-direction: row-reverse; }
+#includeContent .kby-point__img { width: 430px; }
+#includeContent .kby-point__img img { width: 430px; height: 290px; object-fit: cover; border-radius: 6px; }
+#includeContent .kby-point__body { width: 330px; }
+#includeContent .kby-point__num { color: #d8602a; font-size: 48px; line-height: 1; }
+#includeContent .kby-point__title { margin: 10px 0 14px; font-size: 24px; line-height: 1.5; }
+
+/* ギャラリー */
+#includeContent .kby-gallery { position: relative; padding-bottom: 36px; }
+#includeContent .kby-gallery img { width: 100%; height: 520px; object-fit: cover; border-radius: 6px; }
+#includeContent .kby-gallery .swiper-button-prev, #includeContent .kby-gallery .swiper-button-next { color: #fff; top: 260px; }
+#includeContent .kby-gallery .swiper-pagination { bottom: 0; }
+#includeContent .kby-gallery .swiper-pagination-bullet-active { background: #d8602a; }
+
+/* お悩み */
+#includeContent .kby-worry li { position: relative; margin-top: 12px; padding: 16px 24px 16px 64px; border-radius: 8px; background: #fff; font-size: 18px; font-weight: 700; }
+#includeContent .kby-worry__icon { position: absolute; left: 18px; top: 50%; width: 28px; height: 28px; margin-top: -14px; border-radius: 50%; background: #b07a4a; color: #fff; font-size: 15px; line-height: 28px; text-align: center; }
+#includeContent .kby-worry__answer { margin-top: 36px; font-size: 22px; line-height: 1.6; text-align: center; color: #d8602a; }
+
+/* 会場一覧 */
+#includeContent .kby-place { display: flex; flex-wrap: wrap; justify-content: space-between; }
+#includeContent .kby-place__item { position: relative; width: 388px; margin-bottom: 28px; padding: 0 0 20px; border: 1px solid #e3ddd4; border-radius: 8px; background: #fff; overflow: hidden; }
+#includeContent .kby-place__item img { width: 388px; height: 240px; object-fit: cover; }
+#includeContent .kby-place__badge { position: absolute; left: 12px; top: 12px; z-index: 1; padding: 2px 12px; border-radius: 4px; background: #d8602a; color: #fff; font-size: 13px; font-weight: 700; }
+#includeContent .kby-place__name { margin: 16px 22px 8px; font-size: 20px; }
+#includeContent .kby-place__info { display: flex; flex-wrap: wrap; margin: 0 22px; font-size: 14px; line-height: 1.7; }
+#includeContent .kby-place__info dt { width: 64px; color: #8a7a6a; }
+#includeContent .kby-place__info dd { width: calc(100% - 64px); margin: 0; }
+#includeContent .kby-place__note { margin: 4px 20px 0; font-size: 12px; color: #8a7a6a; }
+#includeContent .kby-place__btn { text-align: center !important; display: block; margin: 14px 20px 0; padding: 10px 0; border-radius: 999px; background: #2b2b2b; color: #fff !important; font-size: 15px; font-weight: 700; text-align: center; }
+
+/* 最後のCTA */
+#includeContent .kby-last { padding: 72px 0 80px; background: #f6f1ea; text-align: center; }
+#includeContent .kby-last__logo { width: 260px; margin: 0 auto; }
+#includeContent .kby-last__text { margin: 28px 0 32px; font-size: 26px; line-height: 1.6; }
+#includeContent .kby-last__link { color: #d8602a !important; text-decoration: underline !important; text-underline-offset: 6px; }
+#includeContent .kby-place__btn--soon { background: #b9b2a8; cursor: default; }
+#includeContent .kby-place__lead { margin: -16px 0 36px; text-align: center; }
+
+/* ===== CLTハイブリッド構法のメリット（2026-10-20 追加） ===== */
+#includeContent .kby-sec--dark { background: #2a2623; }
+#includeContent .kby-h--light, #includeContent .kby-text--light, #includeContent .kby-en--light { color: #fff !important; }
+#includeContent .kby-note { margin-top: 12px; font-size: 11px; line-height: 1.6; color: #8a7a6a; }
+#includeContent .kby-note--light { color: #bdb3a8; }
+#includeContent .kby-wide { margin: 0 0 36px; }
+#includeContent .kby-wide img { width: 100%; height: 420px; object-fit: cover; }
+
+/* 構法とは */
+#includeContent .kby-intro { display: flex; align-items: center; justify-content: space-between; }
+#includeContent .kby-intro__img { width: 420px; }
+#includeContent .kby-intro__img img { width: 420px; height: 300px; object-fit: cover; border-radius: 6px; }
+#includeContent .kby-intro__body { width: 350px; }
+#includeContent .kby-intro__body .kby-text + .kby-text { margin-top: 14px; }
+#includeContent .kby-clt { display: flex; align-items: center; justify-content: space-between; margin-top: 36px; padding: 28px 32px; border-radius: 8px; background: #f6f1ea; }
+#includeContent .kby-clt__img { width: 260px; }
+#includeContent .kby-clt__img img { width: 260px; height: 170px; object-fit: cover; border-radius: 6px; }
+#includeContent .kby-clt__body { width: 440px; }
+#includeContent .kby-clt__title { margin-bottom: 8px; font-size: 18px; color: #b07a4a; }
+#includeContent .kby-badge { display: flex; justify-content: space-between; margin-top: 32px !important; }
+#includeContent .kby-badge__item { width: 252px; padding: 16px 10px; border: 2px solid #b5965a; border-radius: 8px; text-align: center; }
+#includeContent .kby-badge__main { display: block; font-size: 19px; color: #8a6a2e; }
+#includeContent .kby-badge__sub { display: block; margin-top: 2px; font-size: 12px; color: #6b5a4a; }
+
+/* 5つのメリット 目次（家の形） */
+#includeContent .kby-index { position: relative; margin: 40px auto 0; padding: 40px 60px 44px; background: #fff; border-radius: 0 0 10px 10px; }
+#includeContent .kby-index:before { content: ""; position: absolute; left: 0; right: 0; top: -60px; height: 60px; background: #fff; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+#includeContent .kby-index__lead { font-size: 18px; text-align: center; color: #6b5a4a; }
+#includeContent .kby-index__title { font-size: 34px; line-height: 1.3; text-align: center; color: #d8602a; }
+#includeContent .kby-index__list { margin-top: 24px !important; }
+#includeContent .kby-index__list li { margin-top: 12px; }
+#includeContent .kby-index__list a { display: block; padding: 12px 20px 12px 74px; position: relative; border-radius: 999px; background: #f6f1ea; color: #2b2b2b !important; font-size: 18px; font-weight: 700; }
+#includeContent .kby-index__list a strong { color: #d8602a; }
+#includeContent .kby-index__list a:after { content: "↓"; position: absolute; right: 22px; top: 12px; color: #b07a4a; }
+#includeContent .kby-index__num { position: absolute; left: 10px; top: 50%; width: 44px; height: 44px; margin-top: -22px; border-radius: 50%; background: #d8602a; color: #fff; font-size: 16px; line-height: 44px; text-align: center; }
+
+/* メリット共通 */
+#includeContent .kby-merit-no { font-size: 16px; letter-spacing: .2em; text-align: center; color: #d8602a; }
+#includeContent .kby-merit-no span { font-size: 30px; }
+#includeContent .kby-sub { margin-bottom: 28px; font-size: 26px; line-height: 1.5; text-align: center; }
+#includeContent .kby-sub strong { color: #d8602a; font-size: 34px; }
+#includeContent .kby-row { display: flex; align-items: center; justify-content: space-between; margin-top: 44px; }
+#includeContent .kby-row--rev { flex-direction: row-reverse; }
+#includeContent .kby-row__img { width: 400px; }
+#includeContent .kby-row__img img { width: 400px; height: 280px; object-fit: cover; border-radius: 6px; }
+#includeContent .kby-row__body { width: 360px; }
+#includeContent .kby-row__title { margin-bottom: 12px; font-size: 24px; line-height: 1.5; }
+#includeContent .kby-row__title strong { color: #d8602a; font-size: 32px; }
+
+/* 70回 */
+#includeContent .kby-big { position: relative; margin-bottom: 28px; }
+#includeContent .kby-big__img img { width: 100%; height: 420px; object-fit: cover; border-radius: 6px; opacity: .85; }
+#includeContent .kby-big__num { position: absolute; right: 24px; bottom: -24px; color: #fff; font-size: 150px; line-height: 1; text-shadow: 0 4px 20px rgba(0,0,0,.5); }
+#includeContent .kby-big__num span { font-size: 40px; }
+#includeContent .kby-test { display: flex; align-items: center; justify-content: space-between; margin-top: 28px; padding: 24px 36px; border-radius: 8px; background: #fff; }
+#includeContent .kby-test__list { display: flex; flex-wrap: wrap; width: 440px; margin: 0; font-size: 16px; line-height: 2; }
+#includeContent .kby-test__list dt, #includeContent .kby-test__list dd { font-size: 17px !important; line-height: 2.1 !important; color: #2b2b2b; }
+#includeContent .kby-test__list dt { width: 60%; margin: 0; border-bottom: 1px dotted #ccc; }
+#includeContent .kby-test__list dd { width: 40%; margin: 0; border-bottom: 1px dotted #ccc; text-align: right; font-weight: 700; }
+#includeContent .kby-test__total { font-size: 30px; color: #d8602a; }
+#includeContent .kby-test__total strong { font-size: 72px; line-height: 1; }
+#includeContent .kby-gal { margin-top: 32px; text-align: center; }
+#includeContent .kby-gal__title { color: #fff; font-size: 24px; line-height: 1.6; }
+#includeContent .kby-gal__title strong { color: #f0a070; font-size: 44px; }
+#includeContent .kby-gal__title small { font-size: 12px; }
+
+/* 耐震等級 */
+#includeContent .kby-grade { display: flex; justify-content: space-between; align-items: flex-end; }
+#includeContent .kby-grade__item { width: 240px; text-align: center; }
+#includeContent .kby-grade__name { font-size: 20px; color: #6b6b6b; }
+#includeContent .kby-grade__bar { margin: 8px 0; padding: 22px 0; background: #b9b2a8; color: #fff; font-size: 34px; font-weight: 700; clip-path: polygon(50% 0, 100% 28%, 100% 100%, 0 100%, 0 28%); }
+#includeContent .kby-grade__item:nth-child(2) .kby-grade__bar { padding: 34px 0; background: #8a9aa3; }
+#includeContent .kby-grade__item--on .kby-grade__bar { padding: 48px 0; background: #d8602a; }
+#includeContent .kby-grade__item--on .kby-grade__name { color: #d8602a; }
+#includeContent .kby-grade__text { font-size: 13px; line-height: 1.6; }
+#includeContent .kby-grade__text strong { color: #d8602a; font-size: 18px; }
+
+/* 変位 */
+#includeContent .kby-disp { display: flex; align-items: center; justify-content: center; margin-top: 32px; }
+#includeContent .kby-disp__item { width: 270px; padding: 22px 10px; border-radius: 8px; background: #fff; text-align: center; }
+#includeContent .kby-disp__label { font-size: 14px; }
+#includeContent .kby-disp__num { font-size: 64px; line-height: 1.1; color: #d8602a; }
+#includeContent .kby-disp__num span { font-size: 24px; }
+#includeContent .kby-disp__num--gray { color: #8a8a8a; }
+#includeContent .kby-disp__arrow { width: 130px; padding: 0 10px; text-align: center; font-size: 16px; line-height: 1.4; color: #d8602a; }
+#includeContent .kby-disp__arrow strong { font-size: 34px; }
+
+/* 耐火 */
+#includeContent .kby-fire { margin: 0; padding: 0 0 0 1.4em; }
+#includeContent .kby-fire li { margin-top: 10px; font-size: 14px; line-height: 1.7; }
+#includeContent .kby-fire li strong { display: block; color: #d8602a; font-size: 16px; }
+
+/* カード */
+#includeContent .kby-cards { display: flex; justify-content: space-between; margin-top: 36px !important; }
+#includeContent .kby-card { padding: 24px; border-radius: 8px; background: #f6f1ea; }
+#includeContent .kby-sec--wood .kby-card { background: #fff; }
+#includeContent .kby-cards--2 .kby-card { width: 388px; }
+#includeContent .kby-cards--3 .kby-card { width: 252px; padding: 20px; }
+#includeContent .kby-card--img { padding: 0 !important; overflow: hidden; }
+#includeContent .kby-card--img img { width: 100%; height: 160px; object-fit: cover; }
+#includeContent .kby-card--img .kby-card__title, #includeContent .kby-card--img .kby-text { margin-left: 16px; margin-right: 16px; }
+#includeContent .kby-card--img .kby-text { margin-bottom: 18px; font-size: 14px; }
+#includeContent .kby-card__title { margin: 14px 0 8px; font-size: 18px; line-height: 1.5; color: #8a5a2e; }
+#includeContent .kby-cards--3 .kby-card:not(.kby-card--img) .kby-card__title { margin-top: 0; }
+#includeContent .kby-cards--3 .kby-text { font-size: 14px; }
+
+/* 歩み */
+#includeContent .kby-history { display: flex; justify-content: space-between; position: relative; }
+#includeContent .kby-history:before { content: ""; position: absolute; left: 0; right: 0; top: 46px; height: 2px; background: #6b5f55; }
+#includeContent .kby-history li { position: relative; width: 140px; }
+#includeContent .kby-history__year { color: #f0a070; font-size: 30px; line-height: 1.2; }
+#includeContent .kby-history__year:after { content: ""; display: block; width: 14px; height: 14px; margin: 4px 0 12px; border-radius: 50%; background: #f0a070; }
+#includeContent .kby-history__text { color: #fff; font-size: 13px; line-height: 1.7; }
+
+/* ラインアップ */
+#includeContent .kby-lineup__item { display: flex; justify-content: space-between; margin-top: 32px; padding-bottom: 32px; border-bottom: 1px solid #e3ddd4; }
+#includeContent .kby-lineup__img { position: relative; width: 380px; }
+#includeContent .kby-lineup__img img { width: 380px; height: 253px; object-fit: cover; border-radius: 6px; }
+#includeContent .kby-lineup__tag { position: absolute; left: 10px; top: 10px; padding: 2px 12px; border-radius: 4px; background: #2a2623; color: #fff; font-size: 13px; font-weight: 700; }
+#includeContent .kby-lineup__item--top .kby-lineup__tag { background: #b5965a; }
+#includeContent .kby-lineup__body { width: 390px; }
+#includeContent .kby-lineup__name { font-size: 40px; line-height: 1.1; letter-spacing: .06em; }
+#includeContent .kby-lineup__name span { margin-left: 12px; font-size: 18px; color: #8a7a6a; letter-spacing: .3em; }
+#includeContent .kby-lineup__catch { margin: 10px 0 14px; font-size: 18px; line-height: 1.6; color: #d8602a; }
+#includeContent .kby-spec li { position: relative; padding-left: 20px; font-size: 14px; line-height: 1.9; }
+#includeContent .kby-spec li:before { content: ""; position: absolute; left: 2px; top: 10px; width: 9px; height: 9px; border-radius: 50%; background: #b07a4a; }

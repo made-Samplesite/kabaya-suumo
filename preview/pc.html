@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta name="robots" content="noindex, nofollow" /><meta charset="UTF-8" />
+
+<title>確認用（PC）</title>
+<style>
+body { margin: 0; background: #e9e9e9; font-family: sans-serif; }
+.pv-bar { padding: 8px 12px; background: #444; color: #fff; font-size: 12px; text-align: center; }
+/* SUUMO の実寸：PC は #wrapper 954px の中に本文 950px、スマホは画面幅いっぱい */
+.pv-page { width: 954px; margin: 0 auto; padding: 0 2px 40px; background: #fff; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head><body>
+<div class="pv-bar">確認用プレビュー（実際は SUUMO の企業ページ内に表示されます）</div>
+<div class="pv-page">
+<!--
+  ライフデザイン・カバヤ様 SUUMO フリーページ（PC用）
+  SUUMO の企業ページ（PC）の「contents Start」の位置に入る部分。外枠 #includeContent ごと入稿する（アキュラホーム様と同じ形）。
+  ../0001/ は書き出し時に置き換わる（入稿用：/house/hj/report/kigyo_spc/front/<企業コード>/0001/ ／プレビュー用：../0001/）
+  https://suumo.jp/chumon/koumuten/rn_kabayahome/model/ は来場予約ページのURL（SUUMO 側で発行されるもの）に置き換わる
+  jQuery は SUUMO のページ側で読み込まれている前提（PC：1.4 系）。.on() など新しい書き方は使わない
+-->
+<div id="includeContent">
+<link rel="stylesheet" type="text/css" href="../0001/css/main.css" media="screen, tv" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet" />
+
+<div class="kby">
+
+  <!-- メインビジュアル -->
+  <div id="kby-mv" class="kby-mv">
+    <img class="kby-mv__img" src="../0001/img/mv.jpg" alt="CLTの柱と梁が見える構造Lab.の吹き抜け" width="1600" height="1067" />
+    <div class="kby-mv__copy">
+      <p class="kby-mv__label font02">展示場・CLT構造Lab.</p>
+      <p class="kby-mv__title font02">「最強木造」の強さを、<br />見て、触れて、体感。</p>
+      <p class="kby-mv__lead">CLTハイブリッド構法が叶える、<br />地震に勝ち続けられる家、そして住み続けられる家。<br />その強さを、展示場と構造Lab.で体感。</p>
+    </div>
+  </div>
+  <div class="kby-cta">
+    <a class="kby-cta__btn" href="https://suumo.jp/chumon/koumuten/rn_kabayahome/model/"><span class="kby-cta__small">＼ 簡単1分で予約 ／</span>展示場を予約する</a>
+    <p class="kby-cta__note">SUUMOからの来場予約特典：<strong>【特典内容をご記入ください】</strong></p>
+  </div>
+
+  <!-- CLTハイブリッド構法とは -->
+  <div id="kby-intro" class="kby-sec kby-sec--white">
+    <div class="scInr">
+      <p class="kby-en font02">CLT HYBRID</p>
+      <p class="kby-h font02">史上最強木造が新登場。<br />それは、強さと自由のハイブリッド。</p>
+      <div class="kby-intro">
+        <div class="kby-intro__img"><img src="../0001/img/m-frame.jpg" alt="CLTハイブリッドパネルを組み込んだ構造体" width="1000" height="667" /></div>
+        <div class="kby-intro__body">
+          <p class="kby-text">CLTハイブリッド構法とは、木造軸組構法を基準として、従来からある耐力壁に代わり、CLTハイブリッドパネルを耐力壁として組み込んだ、ライフデザイン・カバヤが開発したオリジナルの木造軸組構法です。</p>
+          <p class="kby-text">CLTパネル工法の強く開放的なメリットはそのままに、木造軸組構法と融合させることで、よりリーズナブルで自由な住まいを実現します。</p>
+        </div>
+      </div>
+      <div class="kby-clt">
+        <div class="kby-clt__img"><img src="../0001/img/m-clt.jpg" alt="ひき板を直交するように重ねたCLTのイメージ" width="900" height="562" /></div>
+        <div class="kby-clt__body">
+          <p class="kby-clt__title font02">CLT（直交集成板）とは</p>
+          <p class="kby-text">ひき板（ラミナ）を繊維方向が直交するように積層接着した木質系材料。木材を直角に重ねて接着しているため、収縮変形が抑えられ寸法が安定し、複数方向に対して高い強度を持ちます。欧米では10階を超えるCLT高層ビルも建てられています。</p>
+        </div>
+      </div>
+      <ul class="kby-badge">
+        <li class="kby-badge__item"><span class="kby-badge__main font02">大臣認定取得</span><span class="kby-badge__sub">CLTハイブリッドパネル（2024年）</span></li>
+        <li class="kby-badge__item"><span class="kby-badge__main font02">省令準耐火構造</span><span class="kby-badge__sub">認証取得</span></li>
+        <li class="kby-badge__item"><span class="kby-badge__main font02">CLT再利用パートナー</span><span class="kby-badge__sub">2025年日本国際博覧会 日本館に選定</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5つのメリット（目次） -->
+  <div id="kby-merit" class="kby-sec kby-sec--wood">
+    <div class="scInr02">
+      <div class="kby-index">
+        <p class="kby-index__lead font02">CLTハイブリッド構法の</p>
+        <p class="kby-index__title font02">5つのメリット</p>
+        <ul class="kby-index__list">
+          <li><a href="#kby-m1"><span class="kby-index__num font02">01</span>繰り返す地震に耐える<strong>耐震性</strong></a></li>
+          <li><a href="#kby-m2"><span class="kby-index__num font02">02</span>大地震の後も<strong>住み続けられる</strong></a></li>
+          <li><a href="#kby-m3"><span class="kby-index__num font02">03</span>火災から守る<strong>耐火性</strong></a></li>
+          <li><a href="#kby-m4"><span class="kby-index__num font02">04</span>自由な<strong>大空間・大開口</strong></a></li>
+          <li><a href="#kby-m5"><span class="kby-index__num font02">05</span>人にも環境にもやさしい<strong>木の住まい</strong></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- メリット01 耐震性 -->
+  <div id="kby-m1" class="kby-sec kby-sec--dark">
+    <div class="scInr">
+      <p class="kby-merit-no font02">MERIT <span>01</span></p>
+      <p class="kby-h kby-h--light font02">繰り返す地震にも<br />70回耐える耐震性を実証。</p>
+      <div class="kby-big">
+        <div class="kby-big__img"><img src="../0001/img/m-shake.jpg" alt="三次元大型振動台実験の様子" width="1200" height="800" /></div>
+        <div class="kby-big__num font02">70<span>回</span></div>
+      </div>
+      <p class="kby-text kby-text--light">実際の地震波を上下・左右の三次元でそのまま再現する「三次元大型振動台実験」を、国立研究開発法人 土木研究所にて実施（2024年）。縦揺れ・横揺れの実際の地震波（震度5〜7）にも耐え、合計70回の振動に耐えることを実証しました。実験の結果、構造体に大きな損傷はなく、圧倒的な強さを発揮しました。</p>
+      <div class="kby-test">
+        <dl class="kby-test__list">
+          <dt>震度7</dt><dd>36回</dd>
+          <dt>震度6弱〜6強</dt><dd>24回</dd>
+          <dt>震度6</dt><dd>5回</dd>
+          <dt>震度5強</dt><dd>5回</dd>
+        </dl>
+        <p class="kby-test__total font02">合計<strong>70</strong>回</p>
+      </div>
+      <div class="kby-gal">
+        <p class="kby-gal__title font02">観測史上最大級「東日本大震災」、<br />「能登半島地震」に耐え、最大<strong>5,567</strong>gal<small>※</small>をクリア。</p>
+        <p class="kby-note kby-note--light">※建物2階桁梁部の計測値。galは地震の揺れの大きさを表す加速度の単位。</p>
+      </div>
+    </div>
+  </div>
+  <div class="kby-sec kby-sec--white">
+    <div class="scInr">
+      <p class="kby-sub font02">全棟構造計算対応により<br /><strong>耐震等級3</strong>が標準仕様</p>
+      <ul class="kby-grade">
+        <li class="kby-grade__item"><p class="kby-grade__name font02">耐震等級1</p><p class="kby-grade__bar">1</p><p class="kby-grade__text">建築基準法<br />一般住宅の耐震性能</p></li>
+        <li class="kby-grade__item"><p class="kby-grade__name font02">耐震等級2</p><p class="kby-grade__bar">2</p><p class="kby-grade__text"><strong>1.25倍</strong>の耐震性能<br />病院や学校等避難所となる建物</p></li>
+        <li class="kby-grade__item kby-grade__item--on"><p class="kby-grade__name font02">耐震等級3</p><p class="kby-grade__bar">3</p><p class="kby-grade__text"><strong>1.5倍</strong>の耐震性能<br />消防署や警察署など防災の拠点</p></li>
+      </ul>
+      <p class="kby-note">※プランニングによっては耐震等級3の取得が難しい場合があります。※耐震等級3の取得には評価機関への申請及び認定が必要となり、別途費用が発生いたします。</p>
+      <div class="kby-row">
+        <div class="kby-row__img"><img src="../0001/img/m-panel.jpg" alt="壁の中に配置されたCLTハイブリッドパネル" width="613" height="409" /></div>
+        <div class="kby-row__body">
+          <p class="kby-row__title font02">やさしくて<ruby>剛<rt>つよ</rt></ruby>い壁</p>
+          <p class="kby-text">ダイヤモンド型のCLTハイブリッドパネルを壁の中に配置することで、従来の壁仕上げのまま高い耐力を実現。構造金物やコンセントなどとの干渉も避けられ、住まいの自由度も高まります。</p>
+        </div>
+      </div>
+      <div class="kby-row kby-row--rev">
+        <div class="kby-row__img"><img src="../0001/img/m-shear.jpg" alt="耐力壁の面内せん断試験" width="700" height="767" /></div>
+        <div class="kby-row__body">
+          <p class="kby-row__title font02">同じ力で押しても、<br />変形は<strong>約2/3</strong></p>
+          <p class="kby-text">耐力壁の面内せん断試験では、トラック1台分（1.5トン）の荷重で押した場合でも、CLTハイブリッドパネルは筋かいの耐力壁に比べて小さな変形に留まりました。</p>
+          <p class="kby-note">※自社試験（壁長さ0.91mあたり）</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- メリット02 住み続けられる -->
+  <div id="kby-m2" class="kby-sec kby-sec--wood">
+    <div class="scInr">
+      <p class="kby-merit-no font02">MERIT <span>02</span></p>
+      <p class="kby-h font02">大地震の後も、<br />「住み続けられる家」。</p>
+      <p class="kby-text kby-text--center">地震で倒壊は免れたものの、大きく壊れてしまい住み続けられない家屋も多数あります。<br />倒壊しないのはもちろん、震災後も住み続けられる家＝財産を守る家であることが大切です。</p>
+      <div class="kby-disp">
+        <div class="kby-disp__item">
+          <p class="kby-disp__label">継続使用可能とされる変位<small>※1</small></p>
+          <p class="kby-disp__num kby-disp__num--gray font02">86<span>mm</span></p>
+        </div>
+        <p class="kby-disp__arrow font02">約<strong>1/2</strong><br />の変形に</p>
+        <div class="kby-disp__item">
+          <p class="kby-disp__label">CLTハイブリッド構法 最大変位<small>※2</small></p>
+          <p class="kby-disp__num font02">41<span>mm</span></p>
+        </div>
+      </div>
+      <div class="kby-row">
+        <div class="kby-row__img"><img src="../0001/img/m-shake2.jpg" alt="振動台実験後の建物を確認する様子" width="1000" height="667" /></div>
+        <div class="kby-row__body">
+          <p class="kby-row__title font02">繰り返す余震にも、<br />小さな変形。</p>
+          <p class="kby-text">過去に発生した各地震波（震度6〜7）を加振しても、1回目は15mm以下と小さな変形に収まりました。連続5回加振しても35mm以下。余震などによる繰り返しの揺れにも強いことを証明しています。</p>
+        </div>
+      </div>
+      <p class="kby-note">※1 (一財)日本建築防災協会 応急危険度判定基準（1/30rad）より試算　※2 70回の実験における実験棟二階床変位の値</p>
+    </div>
+  </div>
+
+  <!-- メリット03 耐火性 -->
+  <div id="kby-m3" class="kby-sec kby-sec--white">
+    <div class="scInr">
+      <p class="kby-merit-no font02">MERIT <span>03</span></p>
+      <p class="kby-h font02">住まいを火災から守る実力は、<br />耐火実験で証明されています。</p>
+      <div class="kby-row">
+        <div class="kby-row__img"><img src="../0001/img/m-fire.jpg" alt="CLTパネルの燃焼実験" width="1000" height="750" /></div>
+        <div class="kby-row__body">
+          <p class="kby-row__title font02">省令準耐火構造の<br />認証を取得</p>
+          <ol class="kby-fire">
+            <li><strong>外部から火をもらわない。</strong>外部からのもらい火に対して30分耐火。</li>
+            <li><strong>室内から構造体に火が燃え移らない。</strong>構造体に燃え移るまで15分耐火。</li>
+            <li><strong>他の部屋への延焼を防ぐ。</strong>壁内や天井裏にファイヤーストップを施工。</li>
+          </ol>
+        </div>
+      </div>
+      <ul class="kby-cards kby-cards--2">
+        <li class="kby-card"><p class="kby-card__title font02">火災保険料もお得に</p><p class="kby-text">省令準耐火構造に認定されると、木造住宅でも「T構造（耐火構造）」に属するものとされ、火災保険を抑えることができます。</p></li>
+        <li class="kby-card"><p class="kby-card__title font02">1分間に約1mmしか燃えない</p><p class="kby-text">燃焼実験の結果、CLTパネルは1分間に1mm程度の速度でしか燃え広がらず、試験終了後もパネルの表層しか燃えない結果となりました。</p></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- メリット04 大空間 -->
+  <div id="kby-m4" class="kby-sec kby-sec--wood">
+    <div class="scInr">
+      <p class="kby-merit-no font02">MERIT <span>04</span></p>
+      <p class="kby-h font02">耐力壁が少なくて済むから、<br />自由で開放的な空間に。</p>
+    </div>
+    <div class="kby-wide"><img src="../0001/img/m-space.jpg" alt="大開口のある開放的なリビング" width="1600" height="960" /></div>
+    <div class="scInr">
+      <p class="kby-text kby-text--center">構造体を支える筋かいや耐力壁によって、住まいの開口部は制約を受けてしまいます。<br />耐力が高いCLTハイブリッドパネルなら、優れた耐震性を確保したまま、<br />吹き抜けや大きな窓のある自由で開放的な空間を創り出すことができます。</p>
+      <ul class="kby-cards kby-cards--3">
+        <li class="kby-card kby-card--img"><img src="../0001/img/m-fukinuke.jpg" alt="大きな窓のある吹き抜け" width="900" height="600" /><p class="kby-card__title font02">「吹き抜け」という選択肢</p><p class="kby-text">建物に囲まれた敷地でも、大きな窓のある吹き抜けで明るく開放的なリビングに。</p></li>
+        <li class="kby-card kby-card--img"><img src="../0001/img/m-opening.jpg" alt="連続した開口部のあるダイニング" width="760" height="507" /><p class="kby-card__title font02">連続開口・コーナー開口</p><p class="kby-text">開口部のレイアウトの自由度も高まり、ひろびろ大開口5.46m<small>※</small>の事例も。</p></li>
+        <li class="kby-card kby-card--img"><img src="../0001/img/m-family.jpg" alt="家族がくつろぐリビング" width="1000" height="667" /><p class="kby-card__title font02">将来の変化にも対応</p><p class="kby-text">構造躯体と内装・設備を分けた「スケルトン・インフィル構造」で、家族の変化に合わせて間取りを変えやすく。</p></li>
+      </ul>
+      <p class="kby-note">※テクニカルガイドブック掲載事例。プランや敷地条件により異なります。</p>
+    </div>
+  </div>
+
+  <!-- メリット05 木の住まい -->
+  <div id="kby-m5" class="kby-sec kby-sec--white">
+    <div class="scInr">
+      <p class="kby-merit-no font02">MERIT <span>05</span></p>
+      <p class="kby-h font02">人にも自然にもやさしい、<br />木の住まい。</p>
+    </div>
+    <div class="kby-wide"><img src="../0001/img/m-forest.jpg" alt="森の中に立つCLTパネル" width="1600" height="945" /></div>
+    <div class="scInr">
+      <ul class="kby-cards kby-cards--3">
+        <li class="kby-card"><p class="kby-card__title font02">断熱性はコンクリートの約5倍</p><p class="kby-text">木は鉄やコンクリートに比べて熱を通しにくく、断熱性はコンクリートの約5倍、鉄の約500倍。冬の寒さや夏の暑さから暮らしを守ります。</p></li>
+        <li class="kby-card"><p class="kby-card__title font02">炭素を蓄える「第二の森」</p><p class="kby-text">CLTハイブリッドパネルの木材使用量は、一般的な筋かいの耐力壁の3.3倍。炭素貯蔵量は2倍となり、環境にやさしい住まいです。</p></li>
+        <li class="kby-card"><p class="kby-card__title font02">木の香りで、癒やされる</p><p class="kby-text">木の香りにはリラックス成分「フィトンチッド」が多く含まれ、木のぬくもりのある見た目や手触りが、あたたかな気持ちにしてくれます。</p></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 開発の歩み -->
+  <div id="kby-history" class="kby-sec kby-sec--dark">
+    <div class="scInr">
+      <p class="kby-en kby-en--light font02">OUR MORE THAN 10 YEARS</p>
+      <p class="kby-h kby-h--light font02">CLTと歩んだ<br />10年以上の商品開発。</p>
+      <ul class="kby-history">
+        <li><p class="kby-history__year font02">2014</p><p class="kby-history__text">新建材CLTと出会う</p></li>
+        <li><p class="kby-history__year font02">2015</p><p class="kby-history__text">CLT施工物件の第1棟目、住宅展示場（倉敷中央展示場）が完成</p></li>
+        <li><p class="kby-history__year font02">2017</p><p class="kby-history__text">振動台実験「中高層モデル」を実施</p></li>
+        <li><p class="kby-history__year font02">2018</p><p class="kby-history__text">日本CLT技術研究所（NCL）発足</p></li>
+        <li><p class="kby-history__year font02">2024</p><p class="kby-history__text">振動台実験「住宅モデル」を実施。CLTハイブリッド構法を開発し、商品販売を開始</p></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 商品ラインアップ -->
+  <div id="kby-lineup" class="kby-sec kby-sec--white">
+    <div class="scInr">
+      <p class="kby-en font02">LINEUP</p>
+      <p class="kby-h font02">CLTハイブリッド構法の<br />商品ラインアップ</p>
+      <ul class="kby-lineup">
+        <li class="kby-lineup__item kby-lineup__item--top">
+          <div class="kby-lineup__img"><img src="../0001/img/m-kaon.jpg" alt="KAONの外観" width="900" height="600" /><span class="kby-lineup__tag">最高グレード</span></div>
+          <div class="kby-lineup__body">
+            <p class="kby-lineup__name font02">KAON<span>快温</span></p>
+            <p class="kby-lineup__catch font02">最強木造 × 最高性能。<br />断熱も、気密も、耐震性も。</p>
+            <ul class="kby-spec">
+              <li>断熱等級7・HEAT20 G3基準以上（UA値0.26<small>※</small>）</li>
+              <li>C値0.5以下（cm²/m²）</li>
+              <li>高性能トリプルガラス樹脂窓（熱貫流率0.82）</li>
+              <li>熱交換式の第1種換気システムを標準搭載</li>
+            </ul>
+          </div>
+        </li>
+        <li class="kby-lineup__item">
+          <div class="kby-lineup__img"><img src="../0001/img/m-wago.jpg" alt="WAGOの外観" width="900" height="600" /><span class="kby-lineup__tag">2階建て</span></div>
+          <div class="kby-lineup__body">
+            <p class="kby-lineup__name font02">WAGO<span>和剛</span></p>
+            <p class="kby-lineup__catch font02">地震に勝ち続けられる家、<br />そして住み続けられる家。</p>
+            <ul class="kby-spec">
+              <li>断熱等級6・HEAT20 G2基準相当</li>
+              <li>C値の自社測定値 0.5〜1.0（cm²/m²）</li>
+              <li>高性能トリプルガラス樹脂窓</li>
+              <li>60年安心長期保証（初期保証20年）</li>
+            </ul>
+          </div>
+        </li>
+        <li class="kby-lineup__item">
+          <div class="kby-lineup__img"><img src="../0001/img/m-anju.jpg" alt="ANJUの外観" width="900" height="600" /><span class="kby-lineup__tag">平屋</span></div>
+          <div class="kby-lineup__body">
+            <p class="kby-lineup__name font02">ANJU</p>
+            <p class="kby-lineup__catch font02">安心の平屋で叶える、<br />安住の暮らし。</p>
+            <ul class="kby-spec">
+              <li>光と風を感じる、コート型の平屋</li>
+              <li>モダンと伝統が融合する、和モダンな平屋</li>
+              <li>連続開口・深い軒・勾配天井で開放的に</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <p class="kby-note">※6地域における基準値。プランによりUA値は異なります。性能値は各商品カタログより。</p>
+    </div>
+  </div>
+
+  <!-- 構造Lab.とは -->
+  <div id="kby-sec01" class="kby-sec kby-sec--white">
+    <div class="scInr">
+      <p class="kby-en font02">EXPERIENCE</p>
+      <p class="kby-h font02">この強さを、<br />展示場・構造Lab.で体感。</p>
+      <p class="kby-text">ライフデザイン・カバヤの展示場では、CLTハイブリッド構法の住まいを<br />実際に見て、触れて、確かめられます。<br />さらに体感型ショールーム「構造Lab.」では、パネル展示や開発史、シアターなどを通じて、<br />その耐震性や断熱性を深く理解できます。</p>
+      <ul class="kby-about">
+        <li class="kby-about__item">
+          <img src="../0001/img/panel.jpg" alt="構法の仕組みを解説するパネル展示" width="1200" height="800" />
+          <p class="kby-about__name font02">パネル展示</p>
+          <p class="kby-about__text">構法のしくみや性能を、実物と解説で分かりやすく。</p>
+        </li>
+        <li class="kby-about__item">
+          <img src="../0001/img/history.jpg" alt="CLTハイブリッド構法の開発の歩みを紹介する展示" width="1200" height="800" />
+          <p class="kby-about__name font02">開発史</p>
+          <p class="kby-about__text">CLTハイブリッド構法が生まれるまでの歩みを紹介。</p>
+        </li>
+        <li class="kby-about__item">
+          <img src="../0001/img/theater.jpg" alt="映像で構法を紹介するシアター" width="1200" height="800" />
+          <p class="kby-about__name font02">シアター</p>
+          <p class="kby-about__text">大きな映像で、構造の強さを体感。</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 館内ギャラリー -->
+  <div id="kby-sec03" class="kby-sec kby-sec--white">
+    <div class="scInr">
+      <p class="kby-en font02">GALLERY</p>
+      <p class="kby-h font02">構造Lab.の館内</p>
+      <div class="swiper kby-gallery">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="../0001/img/gallery1.jpg" alt="CLTの柱が並ぶ展示スペース" width="1200" height="800" /></div>
+          <div class="swiper-slide"><img src="../0001/img/gallery2.jpg" alt="性能を解説するパネル" width="1200" height="800" /></div>
+          <div class="swiper-slide"><img src="../0001/img/gallery3.jpg" alt="構造の模型展示" width="1200" height="800" /></div>
+          <div class="swiper-slide"><img src="../0001/img/gallery4.jpg" alt="吹き抜けのある館内" width="1200" height="800" /></div>
+          <div class="swiper-slide"><img src="../0001/img/lounge.jpg" alt="打ち合わせスペース" width="1200" height="800" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 家づくりのお悩み -->
+  <div id="kby-sec04" class="kby-sec kby-sec--gray">
+    <div class="scInr02">
+      <p class="kby-en font02">CONSULTATION</p>
+      <p class="kby-h font02">こんなお悩み、<br />展示場でご相談ください</p>
+      <ul class="kby-worry">
+        <li><span class="kby-worry__icon">？</span>地震に本当に強い家って、どう選べばいい？</li>
+        <li><span class="kby-worry__icon">？</span>木造と鉄骨、構造の違いがよく分からない</li>
+        <li><span class="kby-worry__icon">？</span>吹き抜けや大空間にすると、強さは大丈夫？</li>
+        <li><span class="kby-worry__icon">？</span>断熱性や光熱費のことも知りたい</li>
+        <li><span class="kby-worry__icon">？</span>資金計画や土地探しから相談したい</li>
+      </ul>
+      <p class="kby-worry__answer font02">構造のしくみを実物で見ながら、<br />家づくりのことを何でもご相談いただけます。</p>
+    </div>
+  </div>
+  <div class="kby-cta">
+    <a class="kby-cta__btn" href="https://suumo.jp/chumon/koumuten/rn_kabayahome/model/"><span class="kby-cta__small">＼ 簡単1分で予約 ／</span>展示場を予約する</a>
+  </div>
+
+  <!-- 会場一覧 -->
+  <div id="kby-sec05" class="kby-sec kby-sec--white">
+    <div class="scInr">
+      <p class="kby-en font02">RESERVE</p>
+      <p class="kby-h font02">各エリアの構造Lab.で、<br />実際に体感してみよう</p>
+      <p class="kby-text kby-place__lead">CLTハイブリッド構法のしくみや強さは、各エリアの構造Lab.で実際に体感できます。<br />興味のある方は、お近くの構造Lab.の見学予約（無料）からお申し込みください。</p>
+      <ul class="kby-place">
+        <li class="kby-place__item">
+          <img src="../0001/img/ext-okayama.jpg" alt="岡山南展示場 構造Lab.の外観" width="900" height="600" />
+          <p class="kby-place__name font02">岡山南展示場 構造Lab.</p>
+          <dl class="kby-place__info"><dt>所在地</dt><dd>岡山県岡山市南区海岸通二丁目4-5</dd><dt>電話</dt><dd>086-265-5544</dd><dt>営業時間</dt><dd>10:00〜18:00</dd><dt>定休日</dt><dd>毎週水・第2第3火</dd></dl>
+          <a class="kby-place__btn" href="https://suumo.jp/chumon/koumuten/rn_kabayahome/107195_0007_33/model/mc_035/">見学予約（無料）はこちら</a>
+        </li>
+        <li class="kby-place__item">
+          <img src="../0001/img/ext-hiroshima.jpg" alt="広島西展示場 構造Lab.の外観" width="900" height="600" />
+          <p class="kby-place__name font02">広島西展示場 構造Lab.</p>
+          <dl class="kby-place__info"><dt>所在地</dt><dd>広島県広島市佐伯区皆賀三丁目19-3</dd><dt>電話</dt><dd>082-299-1550</dd><dt>営業時間</dt><dd>10:00〜18:00</dd><dt>定休日</dt><dd>毎週水・第2第3火</dd></dl>
+          <a class="kby-place__btn" href="https://suumo.jp/chumon/koumuten/rn_kabayahome/107195_0011_34/model/mc_003/">見学予約（無料）はこちら</a>
+        </li>
+        <li class="kby-place__item">
+          <img src="../0001/img/ext-kagawa.jpg" alt="香川支店 構造Lab.の外観" width="900" height="600" />
+          <p class="kby-place__name font02">香川支店 構造Lab.</p>
+          <dl class="kby-place__info"><dt>所在地</dt><dd>香川県綾歌郡宇多津町浜一番丁2-3</dd><dt>電話</dt><dd>0877-49-1181</dd><dt>営業時間</dt><dd>10:00〜18:00</dd><dt>定休日</dt><dd>毎週水・第2第3火</dd></dl>
+          <a class="kby-place__btn" href="https://suumo.jp/chumon/koumuten/rn_kabayahome/107195_0013_37/model/mc_004/">見学予約（無料）はこちら</a>
+        </li>
+        <li class="kby-place__item">
+          <span class="kby-place__badge">12月OPEN</span>
+          <img src="../0001/img/ext-midorimachi.jpg" alt="みどりまち展示場 構造Lab.の完成予想図" width="900" height="617" />
+          <p class="kby-place__name font02">みどりまち展示場 構造Lab.</p>
+          <dl class="kby-place__info"><dt>所在地</dt><dd>広島県福山市緑町1-51</dd><dt>電話</dt><dd>084-926-1100</dd><dt>営業時間</dt><dd>10:00〜18:00</dd><dt>定休日</dt><dd>毎週水・第2第3火</dd></dl>
+          <p class="kby-place__note">※写真は完成予想図です</p>
+          <span class="kby-place__btn kby-place__btn--soon">12月OPEN予定</span>
+        </li>
+      </ul>
+      <p class="kby-text kby-text--center">このほか、岡山・広島・香川・愛媛・兵庫・福岡の各展示場、まちかどモデルハウスでもご見学・ご相談いただけます。</p>
+    </div>
+  </div>
+
+  <!-- 最後のCTA -->
+  <div class="kby-last">
+    <img class="kby-last__logo" src="../0001/img/logo.svg" alt="ライフデザイン・カバヤ" width="265" height="45" />
+    <p class="kby-last__text font02">CLTハイブリッド構法の強さを、<br /><a class="kby-last__link" href="https://suumo.jp/chumon/koumuten/rn_kabayahome/model/">各展示場でもご確認いただけます。</a></p>
+    <a class="kby-cta__btn" href="https://suumo.jp/chumon/koumuten/rn_kabayahome/model/"><span class="kby-cta__small">＼ 簡単1分で予約 ／</span>展示場を予約する</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="../0001/js/main.js"></script>
+</div>
+
+</div>
+</body></html>

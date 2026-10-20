@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* ライフデザイン・カバヤ様 SUUMO フリーページ（スマホ用）
+   SUUMO 本体のデザインと混ざらないよう、すべて #kosha_free の内側だけに効かせる
+   画面幅いっぱい（375px 前後）を前提に、横並びはすべて縦積みにしている */
+
+#kosha_free .kby {
+  width: 100%;
+  color: #2b2b2b;
+  font-family: "游ゴシック体", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+  overflow: hidden;
+}
+#kosha_free .kby * { box-sizing: border-box; }
+#kosha_free .kby img { display: block; max-width: 100%; height: auto; }
+#kosha_free p { margin: 0; padding: 0; text-align: inherit; font-size: inherit; line-height: inherit; background: none; border: 0; }
+#kosha_free li, #kosha_free dl, #kosha_free dt, #kosha_free dd { margin: 0; padding: 0; background: none; border: 0; }
+#kosha_free .kby ul { margin: 0; padding: 0; list-style: none; }
+#kosha_free .kby a { text-decoration: none !important; }
+#kosha_free .font02 { font-family: "Zen Kaku Gothic New", "游ゴシック体", YuGothic, sans-serif; font-weight: 700; }
+#kosha_free .scInr, #kosha_free .scInr02 { padding: 0 20px; }
+/* 本文の改行はPC向けなので、スマホでは自然に折り返す */
+#kosha_free .kby-text br, #kosha_free .kby-mv__lead br { display: none; }
+
+/* メインビジュアル */
+#kosha_free .kby-mv { position: relative; height: 440px; overflow: hidden; background: #3a2e24; }
+#kosha_free .kby-mv__img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+#kosha_free .kby-mv:after { content: ""; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: linear-gradient(0deg, rgba(30, 24, 18, .85) 0%, rgba(30, 24, 18, .45) 60%, rgba(30, 24, 18, .15) 100%); }
+#kosha_free .kby-mv__copy { position: absolute; left: 20px; right: 20px; bottom: 32px; z-index: 1; color: #fff; }
+#kosha_free .kby-mv__label { display: inline-block; padding: 2px 10px; border: 1px solid #fff; color: #fff; font-size: 13px; letter-spacing: .12em; }
+#kosha_free .kby-mv__title { margin: 14px 0 0; color: #fff; font-size: 27px; line-height: 1.45; }
+#kosha_free .kby-mv__lead { margin-top: 12px; color: #fff; font-size: 14px; line-height: 1.7; }
+
+/* 予約ボタン */
+#kosha_free .kby-cta { padding: 24px 20px 28px; background: #f6f1ea; text-align: center; }
+#kosha_free .kby-cta__btn {
+  display: block;
+  padding: 12px 10px 14px;
+  border-radius: 999px;
+  background: #d8602a;
+  color: #fff !important;
+  font-family: "Zen Kaku Gothic New", "游ゴシック体", YuGothic, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center !important;
+  box-shadow: 0 4px 0 #a9461b;
+  -webkit-animation: kbyPulse 2s ease-out infinite;
+  animation: kbyPulse 2s ease-out infinite;
+}
+#kosha_free .kby-cta__small { display: block; width: 100%; text-align: center !important; margin-bottom: 2px; color: #fff; font-size: 13px; font-weight: 500; }
+#kosha_free .kby-cta__note { margin-top: 12px; font-size: 12px; color: #6b5a4a; }
+@-webkit-keyframes kbyPulse { 0%, 70%, 100% { -webkit-transform: scale(1); } 80% { -webkit-transform: scale(1.04); } 90% { -webkit-transform: scale(.99); } }
+@keyframes kbyPulse { 0%, 70%, 100% { transform: scale(1); } 80% { transform: scale(1.04); } 90% { transform: scale(.99); } }
+
+/* セクション共通 */
+#kosha_free .kby-sec { padding: 44px 0; }
+#kosha_free .kby-sec--white { background: #fff; }
+#kosha_free .kby-sec--wood { background: #f6f1ea; }
+#kosha_free .kby-sec--gray { background: #efeeeb; }
+#kosha_free .kby-en { color: #b07a4a; font-size: 12px; letter-spacing: .24em; text-align: center; }
+#kosha_free .kby-h { margin: 6px 0 22px; color: #2b2b2b; font-size: 19px; line-height: 1.5; text-align: center; }
+#kosha_free .kby-text { font-size: 14px; line-height: 1.85; }
+#kosha_free .kby-text--center { margin-top: 8px; font-size: 13px; color: #5a5a5a; }
+
+/* 構造Lab.とは */
+#kosha_free .kby-about { margin-top: 24px !important; }
+#kosha_free .kby-about__item { display: flex; align-items: center; margin-top: 14px; }
+#kosha_free .kby-about__item img { width: 120px; height: 84px; flex-shrink: 0; object-fit: cover; border-radius: 6px; }
+#kosha_free .kby-about__name { margin-left: 14px; font-size: 16px; }
+#kosha_free .kby-about__text { display: none; }
+
+/* 3つのポイント */
+#kosha_free .kby-point { margin-top: 28px; }
+#kosha_free .kby-point__img img { width: 100%; height: 210px; object-fit: cover; border-radius: 6px; }
+#kosha_free .kby-point__body { margin-top: 14px; }
+#kosha_free .kby-point__num { color: #d8602a; font-size: 30px; line-height: 1; }
+#kosha_free .kby-point__title { margin: 8px 0 10px; font-size: 19px; line-height: 1.5; }
+
+/* ギャラリー */
+#kosha_free .kby-gallery { position: relative; padding-bottom: 30px; }
+#kosha_free .kby-gallery img { width: 100%; height: 230px; object-fit: cover; border-radius: 6px; }
+#kosha_free .kby-gallery .swiper-button-prev, #kosha_free .kby-gallery .swiper-button-next { color: #fff; top: 115px; --swiper-navigation-size: 28px; }
+#kosha_free .kby-gallery .swiper-pagination { bottom: 0; }
+#kosha_free .kby-gallery .swiper-pagination-bullet-active { background: #d8602a; }
+
+/* お悩み */
+#kosha_free .kby-worry li { position: relative; margin-top: 10px; padding: 12px 14px 12px 50px; border-radius: 8px; background: #fff; font-size: 14px; font-weight: 700; line-height: 1.6; }
+#kosha_free .kby-worry__icon { position: absolute; left: 14px; top: 50%; width: 24px; height: 24px; margin-top: -12px; border-radius: 50%; background: #b07a4a; color: #fff; font-size: 13px; line-height: 24px; text-align: center; }
+#kosha_free .kby-worry__answer { margin-top: 24px; font-size: 16px; line-height: 1.7; text-align: center; color: #d8602a; }
+
+/* 会場一覧 */
+#kosha_free .kby-place__item { position: relative; margin-bottom: 20px; padding: 0 0 18px; border: 1px solid #e3ddd4; border-radius: 8px; background: #fff; overflow: hidden; }
+#kosha_free .kby-place__item img { width: 100%; height: 200px; object-fit: cover; }
+#kosha_free .kby-place__badge { position: absolute; left: 10px; top: 10px; z-index: 1; padding: 2px 10px; border-radius: 4px; background: #d8602a; color: #fff; font-size: 12px; font-weight: 700; }
+#kosha_free .kby-place__name { margin: 12px 16px 6px; font-size: 17px; }
+#kosha_free .kby-place__info { display: flex; flex-wrap: wrap; margin: 0 16px; font-size: 13px; line-height: 1.7; }
+#kosha_free .kby-place__info dt { width: 64px; color: #8a7a6a; }
+#kosha_free .kby-place__info dd { width: calc(100% - 64px); margin: 0; }
+#kosha_free .kby-place__note { margin: 4px 16px 0; font-size: 12px; color: #8a7a6a; }
+#kosha_free .kby-place__btn { text-align: center !important; display: block; margin: 12px 16px 0; padding: 11px 0; border-radius: 999px; background: #2b2b2b; color: #fff !important; font-size: 15px; font-weight: 700; text-align: center; }
+
+/* 最後のCTA */
+#kosha_free .kby-last { padding: 40px 20px 44px; background: #f6f1ea; text-align: center; }
+#kosha_free .kby-last__logo { width: 190px; margin: 0 auto; }
+#kosha_free .kby-last__text { margin: 18px 0 22px; font-size: 18px; line-height: 1.6; }
+#kosha_free .kby-last__link { color: #d8602a !important; text-decoration: underline !important; text-underline-offset: 4px; }
+#kosha_free .kby-place__btn--soon { background: #b9b2a8; cursor: default; }
+#kosha_free .kby-place__lead { margin: -8px 0 24px; }
+
+/* ===== CLTハイブリッド構法のメリット（2026-10-20 追加・スマホ） ===== */
+#kosha_free .kby-sec--dark { background: #2a2623; }
+#kosha_free .kby-h--light, #kosha_free .kby-text--light, #kosha_free .kby-en--light { color: #fff !important; }
+#kosha_free .kby-note { margin-top: 10px; font-size: 10px; line-height: 1.6; color: #8a7a6a; }
+#kosha_free .kby-note--light { color: #bdb3a8; }
+#kosha_free .kby-text--center br, #kosha_free .kby-h br.pc { display: none; }
+#kosha_free .kby-wide { margin: 0 0 24px; }
+#kosha_free .kby-wide img { width: 100%; height: 220px; object-fit: cover; }
+#kosha_free .kby-h { font-size: 19px; }
+
+#kosha_free .kby-intro__img img { width: 100%; height: 210px; object-fit: cover; border-radius: 6px; }
+#kosha_free .kby-intro__body { margin-top: 14px; }
+#kosha_free .kby-intro__body .kby-text + .kby-text { margin-top: 10px; }
+#kosha_free .kby-clt { margin-top: 24px; padding: 18px; border-radius: 8px; background: #f6f1ea; }
+#kosha_free .kby-clt__img img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; }
+#kosha_free .kby-clt__title { margin: 12px 0 6px; font-size: 16px; color: #b07a4a; }
+#kosha_free .kby-badge { margin-top: 20px !important; }
+#kosha_free .kby-badge__item { margin-top: 8px; padding: 10px; border: 2px solid #b5965a; border-radius: 8px; text-align: center; }
+#kosha_free .kby-badge__main { display: block; font-size: 16px; color: #8a6a2e; }
+#kosha_free .kby-badge__sub { display: block; font-size: 11px; color: #6b5a4a; }
+
+#kosha_free .kby-index { position: relative; margin: 34px 0 0; padding: 26px 16px 24px; background: #fff; border-radius: 0 0 10px 10px; }
+#kosha_free .kby-index:before { content: ""; position: absolute; left: 0; right: 0; top: -40px; height: 40px; background: #fff; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+#kosha_free .kby-index__lead { font-size: 14px; text-align: center; color: #6b5a4a; }
+#kosha_free .kby-index__title { font-size: 26px; line-height: 1.3; text-align: center; color: #d8602a; }
+#kosha_free .kby-index__list { margin-top: 16px !important; }
+#kosha_free .kby-index__list li { margin-top: 8px; }
+#kosha_free .kby-index__list a { display: block; position: relative; padding: 10px 28px 10px 54px; border-radius: 999px; background: #f6f1ea; color: #2b2b2b !important; font-size: 14px; font-weight: 700; line-height: 1.5; }
+#kosha_free .kby-index__list a strong { color: #d8602a; }
+#kosha_free .kby-index__list a:after { content: "↓"; position: absolute; right: 14px; top: 10px; color: #b07a4a; }
+#kosha_free .kby-index__num { position: absolute; left: 8px; top: 50%; width: 34px; height: 34px; margin-top: -17px; border-radius: 50%; background: #d8602a; color: #fff; font-size: 13px; line-height: 34px; text-align: center; }
+
+#kosha_free .kby-merit-no { font-size: 13px; letter-spacing: .2em; text-align: center; color: #d8602a; }
+#kosha_free .kby-merit-no span { font-size: 24px; }
+#kosha_free .kby-sub { margin-bottom: 18px; font-size: 19px; line-height: 1.5; text-align: center; }
+#kosha_free .kby-sub strong { color: #d8602a; font-size: 26px; }
+#kosha_free .kby-row { margin-top: 28px; }
+#kosha_free .kby-row__img img { width: 100%; height: 210px; object-fit: cover; border-radius: 6px; }
+#kosha_free .kby-row__title { margin: 12px 0 8px; font-size: 19px; line-height: 1.5; }
+#kosha_free .kby-row__title strong { color: #d8602a; font-size: 26px; }
+
+#kosha_free .kby-big { position: relative; margin-bottom: 22px; }
+#kosha_free .kby-big__img img { width: 100%; height: 220px; object-fit: cover; border-radius: 6px; opacity: .85; }
+#kosha_free .kby-big__num { position: absolute; right: 12px; bottom: -16px; color: #fff; font-size: 90px; line-height: 1; text-shadow: 0 4px 16px rgba(0,0,0,.5); }
+#kosha_free .kby-big__num span { font-size: 26px; }
+#kosha_free .kby-test { margin-top: 20px; padding: 16px 18px; border-radius: 8px; background: #fff; }
+#kosha_free .kby-test__list { display: flex; flex-wrap: wrap; margin: 0; font-size: 14px; line-height: 2; }
+#kosha_free .kby-test__list dt, #kosha_free .kby-test__list dd { font-size: 15px !important; line-height: 2.1 !important; color: #2b2b2b; }
+#kosha_free .kby-test__list dt { width: 60%; margin: 0; border-bottom: 1px dotted #ccc; }
+#kosha_free .kby-test__list dd { width: 40%; margin: 0; border-bottom: 1px dotted #ccc; text-align: right; font-weight: 700; }
+#kosha_free .kby-test__total { margin-top: 8px; font-size: 22px; text-align: center; color: #d8602a; }
+#kosha_free .kby-test__total strong { font-size: 52px; line-height: 1; }
+#kosha_free .kby-gal { margin-top: 22px; text-align: center; }
+#kosha_free .kby-gal__title { color: #fff; font-size: 16px; line-height: 1.7; }
+#kosha_free .kby-gal__title strong { color: #f0a070; font-size: 30px; }
+#kosha_free .kby-gal__title small { font-size: 10px; }
+
+#kosha_free .kby-grade { display: flex; justify-content: space-between; align-items: flex-end; }
+#kosha_free .kby-grade__item { width: 32%; text-align: center; }
+#kosha_free .kby-grade__name { font-size: 13px; color: #6b6b6b; }
+#kosha_free .kby-grade__bar { margin: 6px 0; padding: 14px 0; background: #b9b2a8; color: #fff; font-size: 22px; font-weight: 700; clip-path: polygon(50% 0, 100% 28%, 100% 100%, 0 100%, 0 28%); }
+#kosha_free .kby-grade__item:nth-child(2) .kby-grade__bar { padding: 22px 0; background: #8a9aa3; }
+#kosha_free .kby-grade__item--on .kby-grade__bar { padding: 32px 0; background: #d8602a; }
+#kosha_free .kby-grade__item--on .kby-grade__name { color: #d8602a; }
+#kosha_free .kby-grade__text { font-size: 10px; line-height: 1.5; }
+#kosha_free .kby-grade__text strong { color: #d8602a; font-size: 14px; }
+
+#kosha_free .kby-disp { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; }
+#kosha_free .kby-disp__item { width: 38%; padding: 12px 4px; border-radius: 8px; background: #fff; text-align: center; }
+#kosha_free .kby-disp__label { font-size: 10px; line-height: 1.5; }
+#kosha_free .kby-disp__num { font-size: 40px; line-height: 1.1; color: #d8602a; }
+#kosha_free .kby-disp__num span { font-size: 15px; }
+#kosha_free .kby-disp__num--gray { color: #8a8a8a; }
+#kosha_free .kby-disp__arrow { width: 22%; text-align: center; font-size: 11px; line-height: 1.4; color: #d8602a; }
+#kosha_free .kby-disp__arrow strong { font-size: 22px; }
+
+#kosha_free .kby-fire { margin: 0; padding: 0 0 0 1.3em; }
+#kosha_free .kby-fire li { margin-top: 8px; font-size: 13px; line-height: 1.7; }
+#kosha_free .kby-fire li strong { display: block; color: #d8602a; font-size: 14px; }
+
+#kosha_free .kby-cards { margin-top: 22px !important; }
+#kosha_free .kby-card { margin-top: 12px; padding: 18px; border-radius: 8px; background: #f6f1ea; }
+#kosha_free .kby-sec--wood .kby-card { background: #fff; }
+#kosha_free .kby-card--img { padding: 0 !important; overflow: hidden; }
+#kosha_free .kby-card--img img { width: 100%; height: 190px; object-fit: cover; }
+#kosha_free .kby-card--img .kby-card__title, #kosha_free .kby-card--img .kby-text { margin-left: 16px; margin-right: 16px; }
+#kosha_free .kby-card--img .kby-text { margin-bottom: 16px; }
+#kosha_free .kby-card__title { margin: 12px 0 6px; font-size: 16px; line-height: 1.5; color: #8a5a2e; }
+#kosha_free .kby-card:not(.kby-card--img) .kby-card__title { margin-top: 0; }
+
+#kosha_free .kby-history { position: relative; padding-left: 26px; }
+#kosha_free .kby-history:before { content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px; background: #6b5f55; }
+#kosha_free .kby-history li { position: relative; margin-top: 14px; }
+#kosha_free .kby-history li:before { content: ""; position: absolute; left: -26px; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: #f0a070; }
+#kosha_free .kby-history__year { color: #f0a070; font-size: 22px; line-height: 1.3; }
+#kosha_free .kby-history__text { color: #fff; font-size: 13px; line-height: 1.7; }
+
+#kosha_free .kby-lineup__item { margin-top: 24px; padding-bottom: 24px; border-bottom: 1px solid #e3ddd4; }
+#kosha_free .kby-lineup__img { position: relative; }
+#kosha_free .kby-lineup__img img { width: 100%; height: 220px; object-fit: cover; border-radius: 6px; }
+#kosha_free .kby-lineup__tag { position: absolute; left: 8px; top: 8px; padding: 2px 10px; border-radius: 4px; background: #2a2623; color: #fff; font-size: 12px; font-weight: 700; }
+#kosha_free .kby-lineup__item--top .kby-lineup__tag { background: #b5965a; }
+#kosha_free .kby-lineup__name { margin-top: 12px; font-size: 32px; line-height: 1.1; letter-spacing: .06em; }
+#kosha_free .kby-lineup__name span { margin-left: 10px; font-size: 15px; color: #8a7a6a; letter-spacing: .3em; }
+#kosha_free .kby-lineup__catch { margin: 8px 0 10px; font-size: 16px; line-height: 1.6; color: #d8602a; }
+#kosha_free .kby-spec li { position: relative; padding-left: 18px; font-size: 13px; line-height: 1.8; }
+#kosha_free .kby-spec li:before { content: ""; position: absolute; left: 2px; top: 8px; width: 8px; height: 8px; border-radius: 50%; background: #b07a4a; }
